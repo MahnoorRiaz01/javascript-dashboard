@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .button {
+      height: 100px;
+      width: 100px;
+      display: inline-block;
+      border: solid black 2px;
+    }
+    #grey {
+    background: grey;
+  }
+  
+  #purple {
+    background: purple;
+  }
+  #pink {
+    background: pink;
+  }
+  #yellow {
+    background: yellow;
+  }
+  #container{
+background-color: #919191;
+  }
+
+  #height,
+  #weight {
+    width: 80px;
+    height: 15px;
+    margin-top: 8px;
+   
+
+  }
+  
+  #weight-guide {
+    /* margin-left: 60px; */
+    margin-top: 25px;
+  }
+  
+  #results {
+    font-size: 35px;
+    margin-left: 90px;
+    margin-top: 20px;
+    color: rgb(241, 241, 241);
+  }
+  .btn{
+    font-size: small;
+    height: 20px;
+    width: 30px;
+  }
+  
+  </style>
+  
+</head>
+<body class="bg-gray-200 text-gray-800 font-sans">
+  <header class="bg-blue-600 text-white p-4 text-center text-2xl font-bold shadow">
+    JavaScript Dashboard
+  </header>
+
+  <main class="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <section id="clock" class="bg-white break-words p-4 rounded-2xl shadow"></section>
+    <section id="todo" class="bg-white p-4  rounded-2xl shadow"></section>
+    <section id="weather" class="bg-white p-4 rounded-2xl shadow"></section>
+    <section id="container" class="bg-white p-4 rounded-2xl col-span-1 shadow text-center">
+      <h1>BMI Calculator</h1>
+      <form>
+        <p><label>Height in CM: </label><input type="text" id="height" /></p>
+        <p><label>Weight in KG: </label><input type="text" id="weight" /></p>
+        <button class="btn">Calculate</button>
+        <div id="results"></div>
+        <div id="weight-guide">
+          <h3>BMI Weight Guide</h3>
+          <p>Under Weight = Less than 18.6</p>
+          <p>Normal Range = 18.6 and 24.9</p>
+          <p>Overweight = Greater than 24.9</p>
+        </div>
+      </form>
+    </section>
+    <section id="canvas" class="bg-white p-4 rounded-2xl shadow col-span-2 text-center m-auto">
+      <h1>Color Scheme Switcher</h1>
+      <span class="button" id="grey"></span>
+      <span class="button" id="purple"></span>
+      <span class="button" id="pink"></span>
+      <span class="button" id="yellow"></span>
+      <h2>
+        Try clicking on one of the colors above
+        <span>to change the background color of this page!</span>
+      </h2>
+   
+  </main>
+
+  <script src="script.js"></script>
+  <script src="weather.js"></script>
+  <script src="clock.js"></script>
+  <script src="colors.js"></script>
+  <script src="bmi.js"></script>
+  
+
+</body>
+</html>
